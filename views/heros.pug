@@ -1,0 +1,16 @@
+extends layout
+
+block content
+
+    each val in data
+       .row
+          .col-6
+               .card.blue-grey
+                   .card-content 
+                       
+                       p  Heroine: #{val.name}
+                      
+                   .card-action
+                       a(href='deleteRow?name='+val.name) Delete
+                       a(href='viewRow?id='+val.id) view
+                   
